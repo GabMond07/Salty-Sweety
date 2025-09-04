@@ -1,0 +1,423 @@
+---
+// No necesitamos importar GSAP
+---
+
+<section
+  class="catalogo-section relative py-20 px-4 md:px-8 lg:px-16 overflow-hidden"
+  id="catalogo"
+>
+  <!-- Gradiente de fondo inspirado en aurora, adaptado a postres dulces -->
+  <div
+    class="absolute inset-0 z-0 pointer-events-none"
+    style="background: radial-gradient(ellipse 80% 60% at 10% 30%, rgba(191, 90, 242, 0.35), transparent 70%), radial-gradient(ellipse 70% 60% at 50% 50%, rgba(251, 236, 81, 0.3), transparent 70%), radial-gradient(ellipse 60% 50% at 90% 70%, rgba(255, 100, 180, 0.28), transparent 65%), linear-gradient(135deg, #f7eaff 0%, #fde2ea 100%);"
+  >
+  </div>
+
+  <!-- Elementos decorativos flotantes, como partículas dulces -->
+  <div class="absolute inset-0 z-5 pointer-events-none overflow-hidden">
+    <div
+      class="animate-float-slow absolute top-10 left-20 w-3 h-3 bg-[var(--primary)] rounded-full opacity-50"
+    >
+    </div>
+    <div
+      class="animate-float-medium absolute top-40 right-30 w-2.5 h-2.5 bg-[var(--accent)] rounded-full opacity-40"
+    >
+    </div>
+    <div
+      class="animate-float-fast absolute bottom-20 left-40 w-4 h-4 bg-pink-200 rounded-full opacity-45"
+    >
+    </div>
+    <div
+      class="animate-pulse-subtle absolute bottom-30 right-20 w-6 h-6 border-2 border-[var(--accent)] rounded-full opacity-30"
+    >
+    </div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <!-- Título principal con animación -->
+    <div class="text-center mb-12 md:mb-16">
+      <h2
+        class="catalogo-title opacity-0 text-5xl md:text-6xl lg:text-7xl text-[var(--primary)] font-serif drop-shadow-lg"
+        style="font-family: 'Playfair Display', serif;"
+      >
+        Nuestro Catálogo
+      </h2>
+      <p
+        class="catalogo-subtitle opacity-0 mt-4 text-xl md:text-2xl text-[var(--mutedForeground)]"
+        style="font-family: 'Poppins', sans-serif;"
+      >
+        Cada postre está cuidadosamente elaborado con ingredientes premium y
+        técnicas artesanales para ofrecerte una experiencia inolvidable.
+      </p>
+    </div>
+
+    <!-- Cuadrícula de postres (grid responsive) -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- Tarjeta 1: Strawberry Pound Cake -->
+      <div
+        class="catalogo-card opacity-0 bg-white/10 backdrop-blur-md rounded-[var(--radius-lg)] p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-105"
+      >
+        <div
+          class="flex justify-center mb-4 overflow-hidden rounded-[var(--radius-md)]"
+        >
+          <img
+            class="catalogo-image w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1488477304112-4944851de03d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600"
+            alt="Strawberry Pound Cake"
+            loading="lazy"
+          />
+        </div>
+        <h3
+          class="text-2xl text-[var(--accent)] font-semibold mb-2"
+          style="font-family: 'Poppins', sans-serif;"
+        >
+          Strawberry Pound Cake
+        </h3>
+        <p
+          class="text-[var(--mutedForeground)] mb-4"
+          style="font-family: 'Open Sans', sans-serif;"
+        >
+          Bizcocho esponjoso con fresas frescas y un toque de vainilla. Perfecto
+          para compartir.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-[var(--primary)] font-bold">$12.99</span>
+          <button
+            class="px-4 py-2 bg-[var(--accent)] text-[var(--accentForeground)] rounded-[var(--radius-md)] hover:bg-[var(--primary)] transition-all"
+            >Añadir al carrito</button
+          >
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Cake with Cherry -->
+      <div
+        class="catalogo-card opacity-0 bg-white/10 backdrop-blur-md rounded-[var(--radius-lg)] p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-105"
+      >
+        <div
+          class="flex justify-center mb-4 overflow-hidden rounded-[var(--radius-md)]"
+        >
+          <img
+            class="catalogo-image w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600"
+            alt="Cake with Cherry"
+            loading="lazy"
+          />
+        </div>
+        <h3
+          class="text-2xl text-[var(--accent)] font-semibold mb-2"
+          style="font-family: 'Poppins', sans-serif;"
+        >
+          Cake with Cherry
+        </h3>
+        <p
+          class="text-[var(--mutedForeground)] mb-4"
+          style="font-family: 'Open Sans', sans-serif;"
+        >
+          Tarta cremosa con cerezas jugosas y base crujiente. Una explosión de
+          sabor.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-[var(--primary)] font-bold">$14.99</span>
+          <button
+            class="px-4 py-2 bg-[var(--accent)] text-[var(--accentForeground)] rounded-[var(--radius-md)] hover:bg-[var(--primary)] transition-all"
+            >Añadir al carrito</button
+          >
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Chocolate Delight -->
+      <div
+        class="catalogo-card opacity-0 bg-white/10 backdrop-blur-md rounded-[var(--radius-lg)] p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-105"
+      >
+        <div
+          class="flex justify-center mb-4 overflow-hidden rounded-[var(--radius-md)]"
+        >
+          <img
+            class="catalogo-image w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1578145288677-6d60b380f44f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600"
+            alt="Chocolate Delight"
+            loading="lazy"
+          />
+        </div>
+        <h3
+          class="text-2xl text-[var(--accent)] font-semibold mb-2"
+          style="font-family: 'Poppins', sans-serif;"
+        >
+          Chocolate Delight
+        </h3>
+        <p
+          class="text-[var(--mutedForeground)] mb-4"
+          style="font-family: 'Open Sans', sans-serif;"
+        >
+          Capas de chocolate intenso con nueces. Ideal para los amantes del
+          cacao.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-[var(--primary)] font-bold">$11.49</span>
+          <button
+            class="px-4 py-2 bg-[var(--accent)] text-[var(--accentForeground)] rounded-[var(--radius-md)] hover:bg-[var(--primary)] transition-all"
+            >Añadir al carrito</button
+          >
+        </div>
+      </div>
+
+      <!-- Tarjeta 4: Lemon Tart -->
+      <div
+        class="catalogo-card opacity-0 bg-white/10 backdrop-blur-md rounded-[var(--radius-lg)] p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-white/20 transform hover:scale-105"
+      >
+        <div
+          class="flex justify-center mb-4 overflow-hidden rounded-[var(--radius-md)]"
+        >
+          <img
+            class="catalogo-image w-full h-48 md:h-56 object-cover hover:scale-110 transition-transform duration-500"
+            src="https://images.unsplash.com/photo-1519915028121-7d3463d20b13?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600"
+            alt="Lemon Tart"
+            loading="lazy"
+          />
+        </div>
+        <h3
+          class="text-2xl text-[var(--accent)] font-semibold mb-2"
+          style="font-family: 'Poppins', sans-serif;"
+        >
+          Lemon Tart
+        </h3>
+        <p
+          class="text-[var(--mutedForeground)] mb-4"
+          style="font-family: 'Open Sans', sans-serif;"
+        >
+          Tarta refrescante con limón y merengue. Ligera y ácida, perfecta para
+          el verano.
+        </p>
+        <div class="flex justify-between items-center">
+          <span class="text-lg text-[var(--primary)] font-bold">$10.99</span>
+          <button
+            class="px-4 py-2 bg-[var(--accent)] text-[var(--accentForeground)] rounded-[var(--radius-md)] hover:bg-[var(--primary)] transition-all"
+            >Añadir al carrito</button
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Botón para ver más -->
+    <div class="text-center mt-12">
+      <button
+        class="catalogo-button opacity-0 px-8 py-3 rounded-[var(--radius-md)] bg-[var(--primary)] text-[var(--primaryForeground)] hover:bg-[var(--accent)] hover:text-[var(--accentForeground)] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+        style="font-family: 'Poppins', sans-serif;"
+      >
+        Ver Más Postres
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ========== ANIMACIONES PARA CATÁLOGO ========== */
+
+  /* Animación del título principal */
+  @keyframes catalogoTitleIn {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animación del subtítulo */
+  @keyframes catalogoSubtitleIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animación de las tarjetas con efecto staggered */
+  @keyframes catalogoCardIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Animación del botón */
+  @keyframes catalogoButtonIn {
+    from {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Efecto parallax para imágenes */
+  @keyframes parallaxFloat {
+    from {
+      transform: translateY(0) rotateY(0deg);
+    }
+    to {
+      transform: translateY(-10px) rotateY(5deg);
+    }
+  }
+
+  /* Estados activos cuando son visibles */
+  .catalogo-title.animate-in {
+    animation: catalogoTitleIn 1.2s ease-out forwards;
+  }
+
+  .catalogo-subtitle.animate-in {
+    animation: catalogoSubtitleIn 1s ease-out 0.3s forwards;
+  }
+
+  .catalogo-card.animate-in {
+    animation: catalogoCardIn 0.8s ease-out forwards;
+  }
+
+  /* Staggered delay para las tarjetas */
+  .catalogo-card:nth-child(1).animate-in {
+    animation-delay: 0s;
+  }
+  .catalogo-card:nth-child(2).animate-in {
+    animation-delay: 0.2s;
+  }
+  .catalogo-card:nth-child(3).animate-in {
+    animation-delay: 0.4s;
+  }
+  .catalogo-card:nth-child(4).animate-in {
+    animation-delay: 0.6s;
+  }
+
+  .catalogo-button.animate-in {
+    animation: catalogoButtonIn 1s ease-out 0.8s forwards;
+  }
+
+  /* Efecto parallax scroll para imágenes */
+  .catalogo-image.parallax-active {
+    animation: parallaxFloat 2s ease-in-out infinite alternate;
+  }
+
+  /* Transiciones suaves al hacer scroll */
+  .catalogo-title,
+  .catalogo-subtitle,
+  .catalogo-card,
+  .catalogo-button {
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Mejoras visuales adicionales */
+  .catalogo-card:hover .catalogo-image {
+    transform: scale(1.1) rotateY(5deg);
+  }
+
+  .catalogo-card {
+    backdrop-filter: blur(20px);
+    background: linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.05)
+    );
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+
+  .catalogo-card:hover {
+    box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    transform: translateY(-8px) scale(1.02);
+  }
+</style>
+
+<script>
+  // Intersection Observer para triggear animaciones en scroll
+  const observerOptions = {
+    threshold: 0.2,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-in");
+
+        // Efecto parallax para imágenes cuando la tarjeta es visible
+        if (entry.target.classList.contains("catalogo-card")) {
+          const image = entry.target.querySelector(".catalogo-image");
+          if (image) {
+            image.classList.add("parallax-active");
+          }
+        }
+
+        // Una vez animado, dejar de observar para mejor performance
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observar elementos que necesitan animación
+  const animateElements = document.querySelectorAll(
+    ".catalogo-title, .catalogo-subtitle, .catalogo-card, .catalogo-button"
+  );
+
+  animateElements.forEach((el) => {
+    observer.observe(el);
+  });
+
+  // Efecto parallax adicional para imágenes basado en scroll
+  let ticking = false;
+
+  function updateParallax() {
+    const cards = document.querySelectorAll(".catalogo-card.animate-in");
+    const scrollY = window.pageYOffset;
+
+    cards.forEach((card, index) => {
+      const rect = card.getBoundingClientRect();
+      const image = card.querySelector(".catalogo-image");
+
+      if (rect.top < window.innerHeight && rect.bottom > 0 && image) {
+        const speed = 0.05 + index * 0.01; // Velocidad diferente por tarjeta
+        const yPos = -(scrollY * speed);
+        const rotation = Math.sin(scrollY * 0.001 + index) * 2;
+
+        image.style.transform = `
+          translateY(${yPos}px) 
+          rotateY(${rotation}deg) 
+          scale(${1 + Math.abs(rotation) * 0.01})
+        `;
+      }
+    });
+
+    ticking = false;
+  }
+
+  function requestTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateParallax);
+      ticking = true;
+    }
+  }
+
+  // Throttled scroll listener para performance
+  window.addEventListener("scroll", requestTick, { passive: true });
+
+  // Limpiar al salir de la página
+  window.addEventListener("beforeunload", () => {
+    window.removeEventListener("scroll", requestTick);
+    observer.disconnect();
+  });
+</script>

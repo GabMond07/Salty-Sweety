@@ -1,5 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Catalogo from "../components/Catalogo-section.astro";
+import Features from "../components/Features-section.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout title="Salty & Sweety">
@@ -53,15 +56,29 @@ import Layout from "../layouts/Layout.astro";
     <div
       class="hero-content flex flex-col items-center justify-center mx-auto w-full h-full min-h-[100dvh] gap-6 px-4 py-8"
     >
-      <!-- 3D Model - Posicionado en la parte superior para móviles -->
+      <!-- 3D Models - Responsive positioning -->
       <div class="w-full flex justify-center relative order-1 md:order-none">
+        <!-- Strawberry Pound Cake - Top right on desktop -->
         <model-viewer
-          class="animate-model w-[210px] h-[130px] sm:w-[240px] sm:h-[140px] md:w-[280px] md:h-[160px] lg:w-[300px] lg:h-[180px] md:absolute md:top-[-50px] md:right-0 md:lg:right-[-50px] xl:right-[-100px] z-20"
+          class="animate-model w-[225px] h-[125px] sm:w-[240px] sm:h-[140px] md:w-[240px] md:h-[140px] lg:w-[280px] lg:h-[180px] md:absolute md:top-[-50px] md:right-0 md:lg:right-[50px] xl:right-[100px] z-20"
           src="/strawberry_pound_cake.glb"
-          alt="3D model of a delicious cake"
+          alt="3D model of a strawberry pound cake"
           auto-rotate
           shadow-intensity=".8"
           exposure="1.2"
+          loading="eager"
+        >
+        </model-viewer>
+
+        <!-- Cherry Cake - Bottom left on desktop, hidden on mobile -->
+        <model-viewer
+          class="hidden md:block animate-model w-[225px] h-[125px] sm:w-[240px] sm:h-[140px] md:w-[250px] md:h-[150px] lg:w-[280px] lg:h-[180px] md:absolute md:top-[-60px] md:left-0 md:lg:left-[50px] xl:left-[100px] z-20"
+          src="/cake_with_cherry.glb"
+          alt="3D model of a cake with cherry"
+          auto-rotate
+          shadow-intensity=".8"
+          exposure="1.2"
+          loading="eager"
         >
         </model-viewer>
       </div>
@@ -141,7 +158,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         <!-- Mensaje motivacional -->
-        <div class="animate-message text-center mt-4">
+        <div class="animate-message text-center mt-2">
           <p
             class="text-base md:text-lg text-[var(--primary)] font-semibold"
             style="font-family: 'Poppins', sans-serif;"
@@ -152,14 +169,14 @@ import Layout from "../layouts/Layout.astro";
             class="text-sm text-[var(--mutedForeground)] mt-1"
             style="font-family: 'Source Code Pro', monospace;"
           >
-            Sabores únicos • Momentos especiales
+            • Sabores únicos • Momentos especiales
           </p>
         </div>
       </div>
 
       <!-- Indicador de scroll -->
       <div
-        class="animate-scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--mutedForeground)] order-3"
+        class="hidden md:flex animate-scroll-indicator absolute left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-[var(--mutedForeground)] order-3 bottom-0 mt-4 md:bottom-4 lg:bottom-0"
       >
         <span class="text-xs font-medium">Descubre más</span>
         <div
@@ -169,149 +186,13 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
-
+  <Catalogo />
+  <Features />
+  <Footer />
   <script>
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Animaciones mejoradas con timing más dinámico
-    gsap.from(".animate-badge", {
-      opacity: 0,
-      y: -20,
-      scale: 0.8,
-      duration: 1,
-      delay: 0.1,
-      ease: "back.out(1.2)",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-title", {
-      opacity: 0,
-      y: -50,
-      duration: 1.2,
-      delay: 0.2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-subtitle", {
-      opacity: 0,
-      x: -50,
-      duration: 1,
-      delay: 0.4,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-description", {
-      opacity: 0,
-      y: 30,
-      duration: 1,
-      delay: 0.6,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-features", {
-      opacity: 0,
-      y: 20,
-      duration: 1,
-      delay: 0.7,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-button-primary", {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      delay: 0.8,
-      ease: "elastic.out(1, 0.5)",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-button-secondary", {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      delay: 0.9,
-      ease: "elastic.out(1, 0.5)",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-message", {
-      opacity: 0,
-      y: 20,
-      duration: 1,
-      delay: 1,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-model", {
-      opacity: 0,
-      y: -40,
-      scale: 0.8,
-      duration: 2,
-      delay: 0.3,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    gsap.from(".animate-scroll-indicator", {
-      opacity: 0,
-      y: 20,
-      duration: 1,
-      delay: 1.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".hero-content",
-        start: "top 80%",
-        toggleActions: "play none none reset",
-      },
-    });
-
-    // Configuración del model-viewer
-    const modelViewer = document.querySelector("model-viewer");
-    if (modelViewer) {
+    // Solo mantenemos la configuración de model-viewer
+    const modelViewers = document.querySelectorAll("model-viewer");
+    modelViewers.forEach((modelViewer) => {
       modelViewer.addEventListener("progress", (event) => {
         const target = event.target as HTMLElement & {
           shadowRoot?: ShadowRoot;
@@ -323,6 +204,6 @@ import Layout from "../layouts/Layout.astro";
           }
         }
       });
-    }
+    });
   </script>
 </Layout>

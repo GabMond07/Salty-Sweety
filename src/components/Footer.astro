@@ -1,0 +1,423 @@
+---
+// Footer.astro - Pie de página
+---
+
+<footer
+  class="footer-section relative py-16 px-4 overflow-hidden bg-gradient-to-br from-[var(--primary)] via-purple-600 to-pink-500"
+>
+  <!-- Elementos decorativos flotantes -->
+  <div class="absolute inset-0 z-5 pointer-events-none overflow-hidden">
+    <div
+      class="animate-float-slow absolute top-8 left-16 w-2 h-2 bg-white/20 rounded-full"
+    >
+    </div>
+    <div
+      class="animate-float-medium absolute top-20 right-20 w-3 h-3 bg-white/15 rounded-full"
+    >
+    </div>
+    <div
+      class="animate-float-fast absolute bottom-16 left-1/4 w-2.5 h-2.5 bg-white/10 rounded-full"
+    >
+    </div>
+    <div
+      class="animate-pulse-subtle absolute bottom-32 right-1/3 w-4 h-4 border border-white/15 rounded-full"
+    >
+    </div>
+  </div>
+
+  <!-- Overlay gradient para mejor legibilidad -->
+  <div class="absolute inset-0 bg-black/10"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Columna 1: Información de la marca -->
+      <div class="footer-brand opacity-0 text-center md:text-left">
+        <h3
+          class="text-2xl md:text-3xl font-bold mb-4 text-white"
+          style="font-family: 'Playfair Display', serif;"
+        >
+          Salty & Sweety
+        </h3>
+        <p
+          class="text-white/80 mb-6 leading-relaxed"
+          style="font-family: 'Open Sans', sans-serif;"
+        >
+          Creando momentos dulces e inolvidables desde el corazón. Cada postre
+          cuenta una historia de amor y dedicación.
+        </p>
+
+        <!-- Redes sociales -->
+        <div class="flex justify-center md:justify-start space-x-4">
+          <a
+            href="#"
+            class="social-link p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-110 border border-white/20"
+            aria-label="Instagram"
+          >
+            <!-- Instagram Icon -->
+            <svg
+              class="w-5 h-5 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              ></path>
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-110 border border-white/20"
+            aria-label="Facebook"
+          >
+            <!-- Facebook Icon -->
+            <svg
+              class="w-5 h-5 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+              ></path>
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            class="social-link p-3 rounded-full bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300 transform hover:scale-110 border border-white/20"
+            aria-label="Twitter"
+          >
+            <!-- Twitter/X Icon -->
+            <svg
+              class="w-5 h-5 text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Columna 2: Enlaces rápidos -->
+      <div class="footer-links opacity-0 text-center md:text-left">
+        <h4
+          class="text-lg md:text-xl font-semibold mb-4 text-white"
+          style="font-family: 'Poppins', sans-serif;"
+        >
+          Enlaces Rápidos
+        </h4>
+        <ul class="space-y-3">
+          <li>
+            <a
+              href="#catalogo"
+              class="footer-link text-white/80 hover:text-white transition-colors duration-300 flex items-center justify-center md:justify-start group"
+              style="font-family: 'Open Sans', sans-serif;"
+            >
+              <span
+                class="inline-block transform group-hover:translate-x-1 transition-transform duration-300"
+                >Catálogo</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="footer-link text-white/80 hover:text-white transition-colors duration-300 flex items-center justify-center md:justify-start group"
+              style="font-family: 'Open Sans', sans-serif;"
+            >
+              <span
+                class="inline-block transform group-hover:translate-x-1 transition-transform duration-300"
+                >Sobre Nosotros</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="footer-link text-white/80 hover:text-white transition-colors duration-300 flex items-center justify-center md:justify-start group"
+              style="font-family: 'Open Sans', sans-serif;"
+            >
+              <span
+                class="inline-block transform group-hover:translate-x-1 transition-transform duration-300"
+                >Contacto</span
+              >
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="footer-link text-white/80 hover:text-white transition-colors duration-300 flex items-center justify-center md:justify-start group"
+              style="font-family: 'Open Sans', sans-serif;"
+            >
+              <span
+                class="inline-block transform group-hover:translate-x-1 transition-transform duration-300"
+                >Pedidos Especiales</span
+              >
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Columna 3: Información de contacto -->
+      <div class="footer-contact opacity-0 text-center md:text-left">
+        <h4
+          class="text-lg md:text-xl font-semibold mb-4 text-white"
+          style="font-family: 'Poppins', sans-serif;"
+        >
+          Contáctanos
+        </h4>
+        <div class="space-y-4">
+          <div
+            class="flex items-center justify-center md:justify-start text-white/80 group hover:text-white transition-colors duration-300"
+          >
+            <!-- Map Pin Icon -->
+            <svg
+              class="w-5 h-5 mr-3 flex-shrink-0 group-hover:text-[var(--accent)] transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+            <span style="font-family: 'Open Sans', sans-serif;"
+              >Av. Principal 123, Puebla, Pue.</span
+            >
+          </div>
+
+          <div
+            class="flex items-center justify-center md:justify-start text-white/80 group hover:text-white transition-colors duration-300"
+          >
+            <!-- Phone Icon -->
+            <svg
+              class="w-5 h-5 mr-3 flex-shrink-0 group-hover:text-[var(--accent)] transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"
+              ></path>
+            </svg>
+            <span style="font-family: 'Open Sans', sans-serif;"
+              >+52 (222) 123-4567</span
+            >
+          </div>
+
+          <div
+            class="flex items-center justify-center md:justify-start text-white/80 group hover:text-white transition-colors duration-300"
+          >
+            <!-- Mail Icon -->
+            <svg
+              class="w-5 h-5 mr-3 flex-shrink-0 group-hover:text-[var(--accent)] transition-colors duration-300"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+              ></path>
+            </svg>
+            <span style="font-family: 'Open Sans', sans-serif;"
+              >hola@saltysweety.com</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Línea divisora y copyright -->
+    <div
+      class="footer-bottom opacity-0 border-t border-white/20 pt-8 text-center"
+    >
+      <p
+        class="text-white/60 text-sm md:text-base"
+        style="font-family: 'Open Sans', sans-serif;"
+      >
+        © 2024 Salty & Sweety. Todos los derechos reservados. Hecho con 💖 en
+        Puebla.
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  /* ========== ANIMACIONES PARA FOOTER ========== */
+
+  /* Animación de entrada para secciones del footer */
+  @keyframes footerFadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Estados activos cuando son visibles */
+  .footer-brand.animate-in {
+    animation: footerFadeInUp 0.8s ease-out forwards;
+  }
+
+  .footer-links.animate-in {
+    animation: footerFadeInUp 0.8s ease-out 0.2s forwards;
+  }
+
+  .footer-contact.animate-in {
+    animation: footerFadeInUp 0.8s ease-out 0.4s forwards;
+  }
+
+  .footer-bottom.animate-in {
+    animation: footerFadeInUp 0.8s ease-out 0.6s forwards;
+  }
+
+  /* Efectos hover mejorados */
+  .social-link {
+    backdrop-filter: blur(10px);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .social-link:hover {
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px) scale(1.1);
+  }
+
+  .footer-link {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-link::before {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent), white);
+    transition: width 0.3s ease;
+  }
+
+  .footer-link:hover::before {
+    width: 100%;
+  }
+
+  /* Gradiente de fondo mejorado */
+  .footer-section {
+    background: linear-gradient(
+      135deg,
+      var(--primary) 0%,
+      #8b5cf6 25%,
+      #a855f7 50%,
+      #ec4899 75%,
+      #f97316 100%
+    );
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  /* Transiciones suaves */
+  .footer-brand,
+  .footer-links,
+  .footer-contact,
+  .footer-bottom {
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+</style>
+
+<script>
+  // Intersection Observer para triggear animaciones del footer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px",
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("animate-in");
+
+        // Una vez animado, dejar de observar
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  // Observar elementos del footer que necesitan animación
+  const footerElements = document.querySelectorAll(
+    ".footer-brand, .footer-links, .footer-contact, .footer-bottom"
+  );
+
+  footerElements.forEach((el) => {
+    observer.observe(el);
+  });
+
+  // Efecto de parallax sutil para elementos decorativos
+  let ticking = false;
+
+  function updateFooterParallax() {
+    const footer = document.querySelector(".footer-section");
+    const scrollY = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const footerRect = footer?.getBoundingClientRect();
+
+    if (footerRect && footerRect.top < windowHeight && footerRect.bottom > 0) {
+      const floatingElements = footer.querySelectorAll(
+        '[class*="animate-float"]'
+      );
+
+      floatingElements.forEach((el, index) => {
+        const speed = 0.02 + index * 0.005;
+        const yPos = scrollY * speed;
+        el.style.transform += ` translateY(${yPos}px)`;
+      });
+    }
+
+    ticking = false;
+  }
+
+  function requestFooterTick() {
+    if (!ticking) {
+      requestAnimationFrame(updateFooterParallax);
+      ticking = true;
+    }
+  }
+
+  // Throttled scroll listener
+  window.addEventListener("scroll", requestFooterTick, { passive: true });
+
+  // Scroll suave para enlaces internos
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    });
+  });
+
+  // Limpiar al salir de la página
+  window.addEventListener("beforeunload", () => {
+    window.removeEventListener("scroll", requestFooterTick);
+    observer.disconnect();
+  });
+</script>

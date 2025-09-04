@@ -39,92 +39,257 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/* Ocultar scrollbar pero mantener funcionalidad */
+/* Para Chrome, Safari y Opera */
+::-webkit-scrollbar {
+  display: none;
+}
 
-    .hero-section {
-      min-height: 100dvh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
+/* Para Firefox */
+* {
+  scrollbar-width: none;
+}
 
-    .hero-content {
-      backdrop-filter: blur(16px);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-md);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      background: rgba(255, 255, 255, 0.05);
-    }
+/* Para IE y Edge */
+* {
+  -ms-overflow-style: none;
+}
 
-    /* Responsive adjustments for model-viewer */
-    @media (max-width: 768px) {
-      .hero-content {
-        padding-top: 140px; /* Space for 3D model */
-      }
-    }
+.hero-section {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
 
-    @media (min-width: 768px) {
-      .hero-content {
-        padding-right: 320px; /* Space for 3D model on larger screens */
-      }
-    }
+.hero-content {
+  backdrop-filter: blur(16px);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+}
 
+/* Responsive adjustments for model-viewer */
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 120px;
+    /* Space for 3D model */
+  }
+}
 
-        @keyframes float-slow {
-      0%,
-      100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-20px) rotate(10deg);
-      }
-    }
-    
-    @keyframes float-medium {
-      0%,
-      100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-15px) rotate(-8deg);
-      }
-    }
+/* ========== ANIMACIONES FLOTANTES ========== */
+@keyframes float-slow {
 
-    @keyframes float-fast {
-      0%,
-      100% {
-        transform: translateY(0px) rotate(0deg);
-      }
-      50% {
-        transform: translateY(-25px) rotate(15deg);
-      }
-    }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 
-    @keyframes pulse-subtle {
-      0%,
-      100% {
-        opacity: 0.2;
-        transform: scale(1);
-      }
-      50% {
-        opacity: 0.4;
-        transform: scale(1.05);
-      }
-    }
+  50% {
+    transform: translateY(-20px) rotate(10deg);
+  }
+}
 
-    .animate-float-slow {
-      animation: float-slow 6s ease-in-out infinite;
-    }
+@keyframes float-medium {
 
-    .animate-float-medium {
-      animation: float-medium 4s ease-in-out infinite;
-    }
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
 
-    .animate-float-fast {
-      animation: float-fast 5s ease-in-out infinite;
-    }
+  50% {
+    transform: translateY(-15px) rotate(-8deg);
+  }
+}
 
-    .animate-pulse-subtle {
-      animation: pulse-subtle 4s ease-in-out infinite;
-    } 
+@keyframes float-fast {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-25px) rotate(15deg);
+  }
+}
+
+@keyframes pulse-subtle {
+
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.4;
+    transform: scale(1.05);
+  }
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 4s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 5s ease-in-out infinite;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 4s ease-in-out infinite;
+}
+
+/* ========== ANIMACIONES DE ENTRADA ========== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes modelEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ========== CLASES DE ANIMACIÓN ========== */
+.animate-badge {
+  animation: bounceIn 1s ease-out 0.1s both;
+}
+
+.animate-title {
+  animation: fadeInDown 1.2s ease-out 0.2s both;
+}
+
+.animate-subtitle {
+  animation: fadeInLeft 1s ease-out 0.4s both;
+}
+
+.animate-description {
+  animation: fadeInUp 1s ease-out 0.6s both;
+}
+
+.animate-features {
+  animation: slideInFromBottom 1s ease-out 0.7s both;
+}
+
+.animate-button-primary {
+  animation: bounceIn 1s ease-out 0.8s both;
+}
+
+.animate-button-secondary {
+  animation: bounceIn 1s ease-out 0.9s both;
+}
+
+.animate-message {
+  animation: slideInFromBottom 1s ease-out 1s both;
+}
+
+.animate-model {
+  animation: modelEntrance 2s ease-out 0.3s both;
+}
+
+.animate-scroll-indicator {
+  animation: slideInFromBottom 1s ease-out 1.2s both;
+}

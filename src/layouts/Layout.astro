@@ -14,8 +14,19 @@ const { title } = Astro.props;
     />
     <meta name="keywords" content="postres, pasteles, dulces, artesanal" />
     <title>{title}</title>
-    <link rel="preload" href="/strawberry_pound_cake.glb" as="fetch" />
-    <link rel="preload" href="/cake_with_cherry.glb" as="fetch" />
+    <link
+      rel="preload"
+      href="/strawberry_pound_cake.glb"
+      as="fetch"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="preload"
+      href="/cake_with_cherry.glb"
+      as="fetch"
+      crossorigin="anonymous"
+      media="(min-width: 768px)"
+    />
   </head>
   <body>
     <slot />
