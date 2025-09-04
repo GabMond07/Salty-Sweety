@@ -1,0 +1,328 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Salty & Sweety">
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+  ></script>
+  <script
+    nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+  ></script>
+  <section class="hero-section">
+    <!-- Aurora Dream Diagonal Flow Gradient -->
+    <div
+      class="absolute inset-0 z-0 pointer-events-none"
+      style="background: radial-gradient(ellipse 80% 60% at 5% 40%, rgba(175, 109, 255, 0.48), transparent 67%), radial-gradient(ellipse 70% 60% at 45% 45%, rgba(255, 100, 180, 0.41), transparent 67%), radial-gradient(ellipse 62% 52% at 83% 76%, rgba(255, 235, 170, 0.44), transparent 63%), radial-gradient(ellipse 60% 48% at 75% 20%, rgba(120, 190, 255, 0.36), transparent 66%), linear-gradient(45deg, #f7eaff 0%, #fde2ea 100%);"
+    >
+    </div>
+
+    <!-- Elementos decorativos flotantes -->
+    <div class="absolute inset-0 z-5 pointer-events-none overflow-hidden">
+      <!-- Partículas flotantes -->
+      <div
+        class="animate-float-slow absolute top-20 left-10 w-3 h-3 bg-[var(--accent)] rounded-full opacity-60"
+      >
+      </div>
+      <div
+        class="animate-float-medium absolute top-32 right-20 w-2 h-2 bg-[var(--primary)] rounded-full opacity-50"
+      >
+      </div>
+      <div
+        class="animate-float-fast absolute bottom-40 left-20 w-4 h-4 bg-pink-300 rounded-full opacity-40"
+      >
+      </div>
+      <div
+        class="animate-float-slow absolute bottom-60 right-16 w-2.5 h-2.5 bg-blue-300 rounded-full opacity-50"
+      >
+      </div>
+
+      <!-- Formas geométricas sutiles -->
+      <div
+        class="animate-pulse-subtle absolute top-16 right-10 w-8 h-8 border-2 border-[var(--accent)] rotate-45 opacity-30"
+      >
+      </div>
+      <div
+        class="animate-pulse-subtle absolute bottom-20 left-8 w-6 h-6 border-2 border-[var(--primary)] rounded-full opacity-25"
+      >
+      </div>
+    </div>
+
+    <div
+      class="hero-content flex flex-col items-center justify-center mx-auto w-full h-full min-h-[100dvh] gap-6 px-4 py-8"
+    >
+      <!-- 3D Model - Posicionado en la parte superior para móviles -->
+      <div class="w-full flex justify-center relative order-1 md:order-none">
+        <model-viewer
+          class="animate-model w-[210px] h-[130px] sm:w-[240px] sm:h-[140px] md:w-[280px] md:h-[160px] lg:w-[300px] lg:h-[180px] md:absolute md:top-[-50px] md:right-0 md:lg:right-[-50px] xl:right-[-100px] z-20"
+          src="/strawberry_pound_cake.glb"
+          alt="3D model of a delicious cake"
+          auto-rotate
+          shadow-intensity=".8"
+          exposure="1.2"
+        >
+        </model-viewer>
+      </div>
+
+      <!-- Contenido principal -->
+      <div
+        class="w-full flex flex-col items-center justify-center gap-4 order-2 md:order-none max-w-4xl"
+      >
+        <!-- Títulos con mejor jerarquía -->
+        <div class="text-center space-y-2 md:space-y-4">
+          <!-- Badge decorativo -->
+          <div
+            class="animate-badge inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-medium text-[var(--primary)] border border-white/30 mb-4"
+          >
+            ✨ Postres Artesanales ✨
+          </div>
+
+          <h1
+            class="animate-title text-6xl sm:text-6xl md:text-7xl lg:text-8xl text-[var(--primary)] font-serif drop-shadow-lg leading-tight"
+            style="font-family: 'Playfair Display', serif;"
+          >
+            Salty & Sweety
+          </h1>
+
+          <h2
+            class="animate-subtitle text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-[var(--accent)] font-semibold"
+            style="font-family: 'Poppins', sans-serif;"
+          >
+            Postres que Enamoran
+          </h2>
+        </div>
+
+        <!-- Descripción mejorada -->
+        <div class="text-center space-y-4 max-w-2xl">
+          <p
+            class="animate-description text-base sm:text-lg md:text-xl text-[var(--mutedForeground)] leading-relaxed"
+            style="font-family: 'Open Sans', sans-serif;"
+          >
+            Descubre nuestra colección de postres artesanales, elaborados con
+            amor y los mejores ingredientes. Cada bocado es una experiencia
+            única.
+          </p>
+
+          <!-- Features destacadas -->
+          <div
+            class="animate-features flex flex-wrap justify-center gap-4 text-sm md:text-base text-[var(--foreground)] opacity-80"
+          >
+            <span class="flex items-center gap-1">
+              🍰 <span>100% Artesanal</span>
+            </span>
+            <span class="flex items-center gap-1">
+              🌟 <span>Ingredientes Premium</span>
+            </span>
+            <span class="flex items-center gap-1">
+              💝 <span>Hecho con Amor</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div
+          class="flex flex-col sm:flex-row gap-4 items-center justify-center w-full max-w-md"
+        >
+          <button
+            class="animate-button-primary w-full sm:w-auto text-lg px-8 py-3 rounded-[var(--radius-md)] bg-[var(--primary)] text-[var(--primaryForeground)] hover:bg-[var(--accent)] hover:text-[var(--accentForeground)] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            style="font-family: 'Poppins', sans-serif;"
+          >
+            Ver Nuestra Carta
+          </button>
+
+          <button
+            class="animate-button-secondary w-full sm:w-auto text-lg px-8 py-3 rounded-[var(--radius-md)] bg-white/20 backdrop-blur-sm border border-white/30 text-[var(--foreground)] hover:bg-white/30 transition-all duration-300 shadow-md hover:shadow-lg"
+            style="font-family: 'Poppins', sans-serif;"
+          >
+            Contáctanos
+          </button>
+        </div>
+
+        <!-- Mensaje motivacional -->
+        <div class="animate-message text-center mt-4">
+          <p
+            class="text-base md:text-lg text-[var(--primary)] font-semibold"
+            style="font-family: 'Poppins', sans-serif;"
+          >
+            ¡Te van a encantar! 💖
+          </p>
+          <p
+            class="text-sm text-[var(--mutedForeground)] mt-1"
+            style="font-family: 'Source Code Pro', monospace;"
+          >
+            Sabores únicos • Momentos especiales
+          </p>
+        </div>
+      </div>
+
+      <!-- Indicador de scroll -->
+      <div
+        class="animate-scroll-indicator absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--mutedForeground)] order-3"
+      >
+        <span class="text-xs font-medium">Descubre más</span>
+        <div
+          class="w-0.5 h-8 bg-gradient-to-b from-[var(--primary)] to-transparent animate-pulse"
+        >
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    import { gsap } from "gsap";
+    import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animaciones mejoradas con timing más dinámico
+    gsap.from(".animate-badge", {
+      opacity: 0,
+      y: -20,
+      scale: 0.8,
+      duration: 1,
+      delay: 0.1,
+      ease: "back.out(1.2)",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-title", {
+      opacity: 0,
+      y: -50,
+      duration: 1.2,
+      delay: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-subtitle", {
+      opacity: 0,
+      x: -50,
+      duration: 1,
+      delay: 0.4,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-description", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      delay: 0.6,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-features", {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 0.7,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-button-primary", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+      delay: 0.8,
+      ease: "elastic.out(1, 0.5)",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-button-secondary", {
+      opacity: 0,
+      scale: 0.8,
+      duration: 1,
+      delay: 0.9,
+      ease: "elastic.out(1, 0.5)",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-message", {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-model", {
+      opacity: 0,
+      y: -40,
+      scale: 0.8,
+      duration: 2,
+      delay: 0.3,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    gsap.from(".animate-scroll-indicator", {
+      opacity: 0,
+      y: 20,
+      duration: 1,
+      delay: 1.2,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".hero-content",
+        start: "top 80%",
+        toggleActions: "play none none reset",
+      },
+    });
+
+    // Configuración del model-viewer
+    const modelViewer = document.querySelector("model-viewer");
+    if (modelViewer) {
+      modelViewer.addEventListener("progress", (event) => {
+        const target = event.target as HTMLElement & {
+          shadowRoot?: ShadowRoot;
+        };
+        if (target && target.shadowRoot) {
+          const progressBar = target.shadowRoot.querySelector(".progress-bar");
+          if (progressBar) {
+            (progressBar as HTMLElement).style.display = "none";
+          }
+        }
+      });
+    }
+  </script>
+</Layout>
