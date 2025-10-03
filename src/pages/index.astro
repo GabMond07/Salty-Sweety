@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Catalogo from "../components/Catalogo-section.astro";
 import Features from "../components/Features-section.astro";
 import Footer from "../components/Footer.astro";
+import About from "../components/About.astro";
 ---
 
 <Layout title="Salty & Sweety">
@@ -14,7 +15,7 @@ import Footer from "../components/Footer.astro";
     nomodule
     src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
   ></script>
-  <section class="hero-section">
+  <section class="hero-section" id="hero-section">
     <!-- Aurora Dream Diagonal Flow Gradient -->
     <div
       class="absolute inset-0 z-0 pointer-events-none"
@@ -172,7 +173,7 @@ import Footer from "../components/Footer.astro";
             class="text-sm text-[var(--mutedForeground)] mt-1"
             style="font-family: 'Source Code Pro', monospace;"
           >
-            • Sabores únicos • Momentos especiales
+            • Sabores únicos • Momentos especiales • Jueves a domingo
           </p>
         </div>
       </div>
@@ -189,6 +190,7 @@ import Footer from "../components/Footer.astro";
       </div>
     </div>
   </section>
+  <About />
   <Catalogo />
   <Features />
   <Footer />
